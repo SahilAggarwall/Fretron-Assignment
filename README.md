@@ -48,8 +48,8 @@ Fretron/
 ├── googlesheets.js
 ├── server.js
 ├── credentials.json
+├── AppScript.js
 └── token.json
-Apps Script
 ```
 ## File Descriptions
 
