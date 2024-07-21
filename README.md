@@ -196,8 +196,8 @@ Improved error handling mechanisms to provide clear and actionable error message
    - **Request Body:**
      ```json
      {
-       "userId": "string",
-       "organizationId": "string"
+       "userId": ObjectID,
+       "organizationId": ObjectID
      }
      ```
    - **Response:**
