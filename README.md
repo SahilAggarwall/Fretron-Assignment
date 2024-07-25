@@ -20,7 +20,7 @@ A brief description of what this project does and who it's for
 - Integrate with Server: Fetch data from the server and handle user creation directly from the sheet.
 
 - Deliverables: Google Sheets link, scripts, and usage instructions.
-# Tech Stack
+## Tech Stack
 
 
 - **Node.js**: JavaScript runtime for server-side development.
@@ -29,8 +29,7 @@ A brief description of what this project does and who it's for
 - **Mongoose**: ODM (Object Data Modeling) library for MongoDB and Node.js.
 - **Google Sheets API**: For interacting with Google Sheets from the server.
 - **Google Apps Script**: For scripting Google Sheets to interact with the Express server.
-  
-# Structure
+## Structure
 
 ```
 Fretron/
@@ -49,10 +48,10 @@ Fretron/
 ├── googlesheets.js
 ├── server.js
 ├── credentials.json
-├── AppScript.js
 └── token.json
+Apps Script
 ```
-# File Descriptions
+## File Descriptions
 
 #### Middleware & Its Functions
 
@@ -95,8 +94,7 @@ This setup ensures that your application can enforce different levels of access 
 #### Extensions
 
 - **Apps Scripts**: Extension used from Google Sheets to make a Dashboard
-  
-# Features and Improvements
+## Features and Improvements
 
 #### **Dashboard Integration**: 
 Instead of just allowing user creation from the Create User Sheet, a comprehensive dashboard was created. This dashboard enables control over all actions directly within Google Sheets, streamlining the management of users, organizations, and their relationships.
@@ -118,7 +116,7 @@ Robust authorization middleware ensures that only users with the necessary permi
 Improved error handling mechanisms to provide clear and actionable error messages, helping users understand and rectify issues promptly.
 
 
-# API References
+## API References
 
 #### 1. **User Signup**
    - **Endpoint:** `api/auth/signup`
@@ -198,8 +196,8 @@ Improved error handling mechanisms to provide clear and actionable error message
    - **Request Body:**
      ```json
      {
-       "userId": ObjectID,
-       "organizationId": ObjectID
+       "userId": "string",
+       "organizationId": "string"
      }
      ```
    - **Response:**
@@ -223,7 +221,7 @@ Improved error handling mechanisms to provide clear and actionable error message
        "msg": 'User already in organization'
      }
      ```
-# Usage Instructions
+## Usage Instructions
 
 **Start the Server:**
    - Run the following command to start the server:
@@ -242,9 +240,21 @@ Improved error handling mechanisms to provide clear and actionable error message
 **Play:**
    - You can now interact with the dashboard and control actions directly through the Google Sheets interface.
 
+#### Note:
+
+- The Role ID's on Google Sheet Document are as follows:
+
+        1. Green: Admin (Have Access to Everything)
+
+        2. Blue: Employee (Have Access of adding Existing User to Exisitng Company)
+        
+        3. Red: Intern (Don't have access to anything)
+
+- You need to create a Manual Entry in database with Admin Role to make changes through Google Sheets
 
 
-# References
+
+## References
 
 [ChatGPT](https://chatgpt.com/share/0eb6b542-9983-4dae-9996-037febb65d08) : For Help in Projects
 
