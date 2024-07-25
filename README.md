@@ -250,7 +250,7 @@ Improved error handling mechanisms to provide clear and actionable error message
         
         3. Red: Intern (Don't have access to anything)
 
-- You need to create a Manual Entry in database with Admin Role to make changes through Google Sheets
+- You need to create a Manual Entry in database with Admin Role to make changes through Google Sheets (Login with that Admin Role ID and Use the JWT to make changes).
 
 
 
